@@ -7,7 +7,7 @@ const EXPERIENCIE = experienceData.data.experiences;
 ---
 
 <ol class="relative mt-16">
-  {EXPERIENCIE.map((experiencie) => (
+  {EXPERIENCIE.map((experiencie: any) => (
     <li>
       <ExperienceItem {...experiencie} />
     </li>
