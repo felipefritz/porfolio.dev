@@ -1,6 +1,8 @@
 ---
+import { getEntryBySlug } from "astro:content";
 import ThemeToggle from "./ThemeToggle.astro"
 
+const personalData = await getEntryBySlug('userinfo', 'info');
 const navItems = [
   {
     title: "Experiencia",
@@ -20,7 +22,7 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: personalData.data.email,
   },
 ]
 ---
